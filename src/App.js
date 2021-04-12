@@ -1,5 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+
+import { HelloWorld } from './components/hello-world/hello-world'
+import { ContextModule } from './modules/context-module/context.module'
 
 function App() {
   return (
@@ -18,8 +21,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <main className="App-main">
+        <HelloWorld />
+        <ContextModule />
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
