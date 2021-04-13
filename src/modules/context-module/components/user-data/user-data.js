@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import { UserContext } from '../../context/user-context'
+import { UserContext } from '../../context/user-context';
 
 function DisplayUserData() {
-  const { firstName, lastName, emailAddress } = React.useContext(UserContext)
+  const { state } = React.useContext(UserContext);
   return (
     <React.Fragment>
-      <div>{firstName}</div>
-      <div>{lastName}</div>
-      <div>{emailAddress}</div>
+      <div>{state.firstName}</div>
+      <div>{state.lastName}</div>
+      <div>{state.emailAddress}</div>
     </React.Fragment>
-  )
+  );
 }
 
-export { DisplayUserData }
+export { DisplayUserData };

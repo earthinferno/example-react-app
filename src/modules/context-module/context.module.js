@@ -1,12 +1,14 @@
-import { UserContext, userData } from './context/user-context'
-import { DisplayUserData } from './components/user-data/user-data'
+import { UserProvider } from './context/user-context';
+import { DisplayUserData } from './components/user-data/user-data';
 
 function ContextModule() {
   return (
-    <UserContext.Provider value={userData}>
+    // <UserContext.Provider value={userData}>
+    <UserProvider>
       <DisplayUserData></DisplayUserData>
-    </UserContext.Provider>
-  )
+    </UserProvider>
+    // </UserContext.Provider>
+  );
 }
 
-export { ContextModule }
+export { ContextModule };
