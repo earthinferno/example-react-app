@@ -18,24 +18,3 @@ export const UserProvider = (props) => {
     <UserContext.Provider value={value}>{props.children}</UserContext.Provider>
   );
 };
-
-export const UpdateUserName = (firstName, lastName) => {
-  const [state, dispatch] = React.useContext(UserContext);
-  dispatch({
-    type: 'name',
-    action: {
-      firstName: firstName,
-      lastName: lastName,
-    },
-  });
-};
-
-export const UpdateEmailAddress = (emailAddress) => {
-  const [state, dispatch] = React.useContext(UserContext);
-  dispatch({
-    type: 'email',
-    action: {
-      emailAddress: emailAddress,
-    },
-  });
-};

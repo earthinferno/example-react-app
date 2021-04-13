@@ -5,15 +5,15 @@ function ContextReducer(state, action) {
         ...state,
         firstName: action.firstName,
         lastName: action.lastName,
-      }
+      };
     case 'email':
       return {
         ...state,
         emailAddress: action.emailAddress,
-      }
+      };
     default:
-      throw new Error()
+      throw new Error();
   }
 }
 
-export { ContextReducer }
+export { ContextReducer };
