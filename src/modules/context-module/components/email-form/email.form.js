@@ -28,7 +28,7 @@ export const EmailForm = () => {
   }
 
   return (
-    <form class="App-form email-form" onSubmit={handleSubmit}>
+    <form className="App-form email-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="emailAddress">EmailAddress:</label>
         <input

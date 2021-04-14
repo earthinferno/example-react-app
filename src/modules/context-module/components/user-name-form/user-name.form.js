@@ -40,7 +40,7 @@ export const UserNameForm = () => {
   }
 
   return (
-    <form class="App-form user-name-form" onSubmit={handleSubmit}>
+    <form className="App-form user-name-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="firstname">FirstName:</label>
         <input
