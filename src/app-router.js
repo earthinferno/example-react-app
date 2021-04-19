@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { HelloWorld } from './components/hello-world/hello-world';
 import { UserProfile } from './pages/user-profile/user-profile';
+import { Drums } from './pages/drums/drums';
 
 export const AppRouter = (props) => {
   return (
@@ -19,7 +20,7 @@ export const AppRouter = (props) => {
             </React.Fragment>
           </Route>
           <Route path="/drum">
-            <div>Play the drums</div>
+            <Drums />
           </Route>
           <Route path="/">
             <React.Fragment>
