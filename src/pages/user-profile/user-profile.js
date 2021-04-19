@@ -4,7 +4,7 @@ import { UserNameForm } from './components/user-name-form/user-name.form';
 import { EmailForm } from './components/email-form/email.form';
 import { useEffect, useState } from 'react';
 
-function ContextModule(props) {
+function UserProfile(props) {
   const [userData, setUserData] = useState({});
   const [dataFetched, setFetched] = useState(false);
   useEffect(() => {
@@ -30,4 +30,4 @@ function ContextModule(props) {
   );
 }
 
-export { ContextModule };
+export { UserProfile };

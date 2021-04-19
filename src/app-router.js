@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { HelloWorld } from './components/hello-world/hello-world';
-import { ContextModule } from './modules/context-module/context.module';
+import { UserProfile } from './pages/user-profile/user-profile';
 
 export const AppRouter = (props) => {
   return (
@@ -15,7 +15,7 @@ export const AppRouter = (props) => {
           <Route path="/user">
             <React.Fragment>
               <HelloWorld />
-              <ContextModule />
+              <UserProfile />
             </React.Fragment>
           </Route>
           <Route path="/drum">
@@ -24,7 +24,7 @@ export const AppRouter = (props) => {
           <Route path="/">
             <React.Fragment>
               <HelloWorld />
-              <ContextModule />
+              <UserProfile />
             </React.Fragment>
           </Route>
         </Switch>
