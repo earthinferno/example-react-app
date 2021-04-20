@@ -16,17 +16,10 @@ export const Drum = (props) => {
   }
 
   useEffect(() => {
-    if (props.selectedKey === props.qwertyKey) {
+    if (props.selectedKey) {
       playSound();
     }
   });
-
-  useEffect(() => {
-    qwertyKey.current.addEventListener('transitionend', removeTransition);
-    return () => {
-      window.removeEventListener('transitionend', removeTransition);
-    };
-  }, []);
 
   return (
     <React.Fragment>
@@ -35,6 +28,7 @@ export const Drum = (props) => {
         className="key"
         onClick={playSound}
         ref={qwertyKey}
+        onTransitionEnd={removeTransition}
       >
         <kbd>{props.qwertyKey}</kbd>
         <span className="sound">{props.description}</span>
