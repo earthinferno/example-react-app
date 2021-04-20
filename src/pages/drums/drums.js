@@ -23,11 +23,19 @@ export const Drums = () => {
   }
 
   useEffect(() => {
+    window.addEventListener('keydown', handler);
+    // Remove event listeners on cleanup
+    return () => {
+      window.removeEventListener('keydown', handler);
+    };
+  }, []);
+
+  useEffect(() => {
     setQwertyKey('none');
   });
 
   return (
-    <div className="drums" onKeyDown={handler} tabIndex="0">
+    <div className="drums">
       <div className="keys">
         <Drum
           keyValue="65"
